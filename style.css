@@ -1,0 +1,29 @@
+body{
+    background-image: url("./Images/CheckerBackground_RenderFail.png");
+    background-repeat: repeat;
+    margin: 0;
+}
+
+main{
+
+}
+
+header{
+    background-color: rgb(0, 0, 0);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+header img{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}

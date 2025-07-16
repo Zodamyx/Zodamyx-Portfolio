@@ -1,3 +1,4 @@
+/*Home Page*/
 body{
     background-image: url("./Images/CheckerBackground_RenderFail.png");
     background-repeat: repeat;
@@ -5,25 +6,103 @@ body{
 }
 
 main{
+    
+}
 
+img{
+    
 }
 
 header{
     background-color: rgb(0, 0, 0);
-    height: 180px;
+    height: 200px;
     display: flex;
     align-items: center;
-    padding: 10px;
+    align-items: top;
 }
 
 header img{
-    height: 50px;
-    width: 50px;
-    padding: 10px;
+    height: 100px;
+    width: 100px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+a:hover{
+    color: rgb(255, 0, 242);
 }
 
 h1{
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+
+/*Art Page*/
+p{
+        text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+p:hover{
+    color: rgb(255, 0, 242);
+}
+
+
+
+
+
+/*Dropdown Button*/
+.dropbtn{
+    background-color: black;
+    color:aliceblue;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/*The Container*/
+.Art{
+    position: relative;
+    display: inline-block;
+}
+
+/*Dropdown Content (Hidden by Default)*/
+.Art-content{
+    display: none;
+    position: absolute;
+    background-color: rgba(39, 39, 39, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+/*Links inside the dropdown*/
+.Art-content a{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Change color of dropdown links on hover*/
+.Art-content a:hover .dropbtn {background-color: black;}
+
+/*Show the dropdown menu on hover*/
+.Art:hover .Art-content {display: block;}
+
+/*Change the background color of the dropdown button when the dropdown content is shown*/
+.Art:hover .dropbtn { color: rgb(255, 0, 242);}
+.Art-content a:hover{
+    color: rgb(255, 0, 242);
 }

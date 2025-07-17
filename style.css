@@ -5,8 +5,19 @@ body{
     margin: 0;
 }
 
-main{
-    
+main div{
+    grid-template-columns: auto;
+    grid-column: auto;
+    grid-row: auto;
+    width: 100px;
+    border: 15px rgba(0, 0, 0, 0.278);
+    padding: 50px;
+    margin: 20px;
+}
+
+main div img{
+    size-adjust: 30%;
+    width: 300%;
 }
 
 img{
@@ -29,10 +40,11 @@ header img{
 }
 
 a{
-    text-decoration: none;
     color: rgb(255, 255, 255);
+    border: none;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 a:hover{
@@ -45,31 +57,20 @@ h1{
 }
 
 
-/*Art Page*/
-p{
-        text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    text-align: center;
-}
-
-p:hover{
-    color: rgb(255, 0, 242);
-}
 
 
 
-
-
-
+/*Art*/
 /*Dropdown Button*/
 .dropbtn{
     background-color: black;
-    color:aliceblue;
+    color: rgb(255, 255, 255);
     padding: 16px;
-    font-size: 16px;
     border: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /*The Container*/
@@ -94,6 +95,7 @@ p:hover{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: 15px;
 }
 
 /*Change color of dropdown links on hover*/
@@ -133,6 +135,7 @@ p:hover{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: 15px;
 }
 
 /*Change color of dropdown links on hover*/
@@ -172,6 +175,7 @@ p:hover{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: 15px;
 }
 
 /*Change color of dropdown links on hover*/

@@ -62,6 +62,7 @@ p:hover{
 
 
 
+
 /*Dropdown Button*/
 .dropbtn{
     background-color: black;
@@ -104,5 +105,83 @@ p:hover{
 /*Change the background color of the dropdown button when the dropdown content is shown*/
 .Art:hover .dropbtn { color: rgb(255, 0, 242);}
 .Art-content a:hover{
+    color: rgb(255, 0, 242);
+}
+
+
+
+/*Blog*/
+/*The Container*/
+.Blog{
+    position: relative;
+    display: inline-block;
+}
+
+/*Dropdown Content (Hidden by Default)*/
+.Blog-content{
+    display: none;
+    position: absolute;
+    background-color: rgba(39, 39, 39, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+/*Links inside the dropdown*/
+.Blog-content a{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Change color of dropdown links on hover*/
+.Blog-content a:hover .dropbtn {background-color: black;}
+
+/*Show the dropdown menu on hover*/
+.Blog:hover .Blog-content {display: block;}
+
+/*Change the background color of the dropdown button when the dropdown content is shown*/
+.Blog:hover .dropbtn { color: rgb(255, 0, 242);}
+.Blog-content a:hover{
+    color: rgb(255, 0, 242);
+}
+
+
+
+/*About*/
+/*The Container*/
+.About{
+    position: relative;
+    display: inline-block;
+}
+
+/*Dropdown Content (Hidden by Default)*/
+.About-content{
+    display: none;
+    position: absolute;
+    background-color: rgba(39, 39, 39, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+/*Links inside the dropdown*/
+.About-content a{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Change color of dropdown links on hover*/
+.About-content a:hover .dropbtn {background-color: black;}
+
+/*Show the dropdown menu on hover*/
+.About:hover .About-content {display: block;}
+
+/*Change the background color of the dropdown button when the dropdown content is shown*/
+.About:hover .dropbtn { color: rgb(255, 0, 242);}
+.About-content a:hover{
     color: rgb(255, 0, 242);
 }

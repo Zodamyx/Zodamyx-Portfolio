@@ -36,10 +36,15 @@
 }
 
 main {
-    background-color: rgba(0, 0, 0, 0.498);
+    background-color: rgba(0, 0, 0, 0.76);
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 50px;
 }
-
+div img {
+    background-color: white;
+    box-shadow: -5px -5px rgb(255, 255, 255), 5px 5px rgb(255, 255, 255), -5px 5px rgb(255, 255, 255), 5px -5px rgb(255, 255, 255);
+    border-radius: 20px;
+}

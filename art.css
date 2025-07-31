@@ -44,7 +44,7 @@ main {
     border-radius: 50px;
 }
 div img {
-    background-color: white;
-    box-shadow: -5px -5px rgb(255, 255, 255), 5px 5px rgb(255, 255, 255), -5px 5px rgb(255, 255, 255), 5px -5px rgb(255, 255, 255);
+    background-color: rgb(45, 45, 45);
+    box-shadow: -8px -8px rgb(255, 255, 255), 8px 8px rgb(255, 255, 255), -8px 8px rgb(255, 255, 255), 8px -8px rgb(255, 255, 255);
     border-radius: 20px;
 }

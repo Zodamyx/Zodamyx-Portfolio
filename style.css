@@ -5,20 +5,17 @@ body{
     margin: 0;
 }
 
-main div{
-    grid-template-columns: auto;
-    grid-column: auto;
-    grid-row: auto;
-    width: 100px;
-    border: 15px rgba(0, 0, 0, 0.278);
+
+
+main div p{
+    background-color: white;
+    width: 300px;
+    border: 15px white;
     padding: 50px;
     margin: 20px;
 }
 
-main div img{
-    size-adjust: 30%;
-    width: 300%;
-}
+
 
 img{
     
@@ -39,7 +36,7 @@ header img{
     padding-right: 20px;
 }
 
-a{
+body header a{
     color: rgb(255, 255, 255);
     border: none;
     text-decoration: none;
@@ -59,6 +56,7 @@ h1{
 
 
 
+/*All dropdown links*/
 
 /*Art*/
 /*Dropdown Button*/

@@ -1,12 +1,34 @@
 
 main {
-    background-color: rgba(255, 255, 255, 0.877);
+    background-color: rgba(255, 255, 255, 0.92);
+    height: 500px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 20px;
+    box-shadow: -8px -8px rgb(255, 255, 255), 8px 8px rgb(255, 255, 255), -8px 8px rgb(255, 255, 255), 8px -8px rgb(255, 255, 255);
+}
+div h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+div section{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    text-align: left;
     margin-left: 50px;
     margin-right: 50px;
-    border-radius: 20px;
+    line-height: 25px;
 }
-div p {
-    text-align: center;
+
+main div img{
+    display: block;
+    height: 200px;
+    width: 200px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }

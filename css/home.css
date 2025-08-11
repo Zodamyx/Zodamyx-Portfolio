@@ -16,14 +16,41 @@ div h1 {
     font-size: 30px;
 }
 
+div p{
+    width: 300px;
+    padding-left: 50px;
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
 div section{
     background-color: rgb(245, 120, 230);
-    margin-top: 50px;
-    margin-right: 10px;
-    margin-left: 400px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
     height: 350px;
     width: 350px;
     border-radius: 20px;
     box-shadow: -8px -8px rgb(84, 52, 124), 8px 8px rgb(84, 52, 124), -8px 8px rgb(84, 52, 124), 8px -8px rgb(84, 52, 124);
 }
 
+div section h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: center;
+    padding-top: 10px;
+}
+
+div section h3{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: -8px -8px rgb(255, 255, 255), 8px 8px rgb(255, 255, 255), -8px 8px rgb(255, 255, 255), 8px -8px rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    text-align: center;
+}

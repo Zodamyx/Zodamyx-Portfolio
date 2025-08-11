@@ -42,15 +42,14 @@ div section h2{
     padding-top: 10px;
 }
 
-div section h3{
-    background-color: rgb(255, 255, 255);
-    margin: auto;
-    margin-top: 25px;
+div section h3 img{
     height: 200px;
     width: 200px;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: -8px -8px rgb(255, 255, 255), 8px 8px rgb(255, 255, 255), -8px 8px rgb(255, 255, 255), 8px -8px rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: small;
-    text-align: center;
+}
+
+div section h3{
+    margin: auto;
 }

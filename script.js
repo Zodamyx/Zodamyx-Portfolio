@@ -58,4 +58,34 @@ const music_list = [
         name : 'R0cky_Drink3r.wav',
         music : 'Audio/R0cky_Drink3r.mp3',
     },
-]
+];
+
+loadTrack(track_index);
+
+function loadTrack(track_index) {
+    clearInterval(updateTimer);
+    resizeTo();
+
+    curr_time src = music_list [track_index].music;
+    curr_track.load();
+
+    track_art.computedStyleMap.backgroundImage = "url(" + music_list[track_index].img + ")";
+    track_name.textContent = music_list[track_index].name;
+    now_playing.textConent = "Playing music " + (track_index + 1) + " of " + music_list.length;
+
+    updateTimer = setInterval(setUpdate, 1000)
+
+    curr_track.addEventListener('ended', nextTrack);
+}
+
+function playpauseTrack() {
+    isplaying ? pauseTrack() : playTrack();
+}
+
+function playTrack() {
+    curr_track.play();
+    isplaying = true;
+    track_art.classList.add('rotate');
+    wave.classList.add('loader');
+    playpause_btn.innerHTML = '<i class="Image/PauseButton';
+}

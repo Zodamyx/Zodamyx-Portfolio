@@ -37,20 +37,200 @@ div p {
     width: 350px;
     border-radius: 20px;
     box-shadow: -8px -8px rgb(84, 52, 124), 8px 8px rgb(84, 52, 124), -8px 8px rgb(84, 52, 124), 8px -8px rgb(84, 52, 124);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .music-player {
     border: 1px solid transparent;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 10px;
 }
 
 .slider-container img{
-    height: 30px;
+    height: 20px;
     width: auto;
 }
 .buttons img {
     height: 30px;
     width: auto;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.track-art {
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    border: 2px solid white;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px 6px 5px rgba(124, 53, 116, 0.808);
+    -moz-box-shadow: 0px 6px 5px rgba(124, 53, 116, 0.808);
+    -webkit-box-shadow: 0px 6px 5px rgba(124, 53, 116, 0.808);
+    box-shadow: 0px 6px 5px rgba(124, 53, 116, 0.808);
+    -moz-border-radius: 190px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.now-playing {
+    font-size: 16px;
+}
+
+.track-name{
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.active {
+    color: black;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1.0;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek_slider,
+.volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: rgb(102, 62, 151);
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid rgb(71, 40, 109);
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+    opacity: 1.0
+}
+
+.seek_slider {
+    width: 60%;
+}
+
+.volume_slider {
+    width: 30%;
+}
+
+.current-time,
+.total-duration {
+    padding: 10px;
+}
+
+img.VolumeDownButton,
+img.VolumeUpButton {
+    padding: 10px;
+}
+
+img,
+img.PlayButton,
+img.PauseButton,
+img.ForwardButton,
+img.BackwardButton {
+    cursor: pointer;
+}
+
+.randomActive {
+    color: black;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+.loader {
+    height: 70px;
+    display:fleex;
+    justify-content:center;
+    align-items: center;
+}
+
+.loader, stroke {
+    background: white;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate {
+    50% {
+        height: 20%;
+        background: rgb(71, 40, 109);
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.stroke:nth-child(1) {
+    animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+    animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+    animation-delay: 0s;
 }

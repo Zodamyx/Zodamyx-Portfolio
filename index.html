@@ -6,6 +6,7 @@
     <title>Zodamyx Portfolio: Home</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./Images">
     <link rel="Icon" href="./Images/Pfp_Z.png">
     <a href="https://github/zodamyx-portfolio.html"></a>
 </head>
@@ -43,6 +44,7 @@
     <a href="./index.html"></a>
    </header>
 
+   <!--Main Section-->
    <main>
         <div>
             <h1>Welcome</h1>
@@ -50,16 +52,90 @@
                 This portfolio contains my best and most recent artworks, separated into four catagories. Those catagories being Digital Art, 
                 Traditional Art, Sketches, and Fanart. Most of my works are digital, as that is my primary focus area and skill.
             </p>
-            <section>
-                <h2>
-                    Music
-                </h2>
-                <h3>
-                    <img src="Images/MeiKai_R0cky_Drink.jpg" alt="">
-                </h3>
-                <h2>
-                    <audio src=""></audio>
-                </h2>
+            <div class="MusicContainer">
+                    <div class="music-player">
+                        <div class="now-playing">PLAYING x OF y</div>
+                        <div class="track-art"></div>
+                        <div class="track-name">Track Name</div>
+                    </div>
+
+                    <div class="slider_container">
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekto()">
+                        <div class="total-duration">00:00</div>
+                    </div>
+
+                    <div class="slider-container">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                        <i class="fa fa-volume-up"></i>
+                    </div>
+
+
+                    <div class="buttons">
+                        <div class="random-track" onclick="randomTrack()">
+                            <img src="./Images/CheckerBackground_RenderFail.png" alt="">
+                        </div>
+                        <div class="random-track" onclick="prevTrack()">
+                            <i class="fa fa-step-backward fa-2x"></i>
+                        </div>
+                        <div class="playpause-track" onclick="playpauseTrack()">
+                            <i class="Chi11_R4iny_D4y"></i>
+                        </div>
+                        <div class="next-track" onclick="nextTrack()">
+                            <i class="fa fa-step-forward fa-2x"></i>
+                        </div>
+                        <div class="repeat-track" onclick="repeatTrack()">
+                            <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                        </div>
+                    </div>
+
+                    <div id="wave">
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                    </div>
+                    
+            </div>
+                    
+
+
+
+
+                <!---
+                    <button id="PlayAudio" src="./Images/R4iny.jpg" alt="Chi11_R4iny_D4y"></button>
+                        <audio controls>
+                            <source src="Audio/Chi11_R4iny_D4y.mp3" type="audio/mp3">
+                        </audio>
+                    <audio controls>
+                        <source src="Audio/Chi11_R4iny_D4y.mp3" type="audio/mp3"><img src="./Images/R4iny.jpg" alt="">Chi11_R4iny_D4y
+                    </audio>
+                    <audio controls>
+                        <source src="Audio/Eerie, Empty Home with Eyes.mp3" type="audio/mp3"><img src="./Images/Living District.jpeg" alt="">Eerie, Empty Home with Eyes
+                    </audio>
+                    <audio controls>
+                        <source src="Audio/Living District.mp3" type="audio/mp3"><img src="./Images/Living District.jpeg" alt="">Living District
+                    </audio>
+                    <audio controls>
+                        <source src="Audio/Wait and Chill Zone.mp3" type="audio/mp3"><img src="./Images/Living District.jpeg" alt="">Wait and Chill Zone
+                    </audio>
+                    <audio controls>
+                        <source src="Audio/CrinisTheme.mp3" type="audio/mp3"><img src="./Images/Crinis.jpg" alt="">Crinis Theme
+                    </audio>
+                    <audio controls>
+                        <source src="Audio/Space Cockaroach theme.mp3" type="audio/mp3"><img src="./Images/Large_Cockroach.jpg" alt="">Space Cockroach
+                    </audio>
+                    <audio controls>
+                        <source src="Audio/Di9it41_Sp4c3.mp3" type="audio/mp3"><img src="./Images/Di9it41_Sp4c3_Cover.jpg" alt="">Di9it41_Sp4c3
+                    </audio>
+                    <audio controls>
+                        <source src="Audio/R0cky_Dr1nk3r.mp3" type="audio/mp3"><img src="./Images/MeiKai_R0cky_Drink.jpg" alt="">R0cky_Drink3r
+                    </audio>
+                -->
             </section>  
         </div>
    </main>

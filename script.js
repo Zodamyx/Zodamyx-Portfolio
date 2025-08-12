@@ -1,20 +1,22 @@
-let now_playing = document.quarySelector('.now-playing');
+let now_playing = document.querySelector('.now-playing');
 let track_art = document.querySelector('.track-art');
 let track_name = document.quarySelector('.track_name');
 
-let playpause_btn = document.quarySelector('.playpause-track');
-let next_btn = document.quarySelector('.next-track');
-let prev_btn = document.quarySelector('.prev_track');
+let playpause_btn = document.querySelector('.playpause-track');
+let next_btn = document.querySelector('.next-track');
+let prev_btn = document.querySelector('.prev_track');
 
 let seek_slider = document.querySelector('.seek_slider');
-let volume_slider = document.quarySelector('.volume_slider');
-let curr_time = document.quarySelector('.current-time');
+let volume_slider = document.querySelector('.volume_slider');
+let curr_time = document.querySelector('.current-time');
 let total_duration = document.querySelector('.total-duration');
-let wave = document.getElementById('.wave')
-let curr_track = document.createElement('.audio');
+let wave = document.getElementById('wave')
+let randomIcon = document.querySelector('.RandomButton.png')
+let curr_track = document.createElement('audio');
 
 let track_index = 0;
-let isplaying = false;
+let isPlaying = false;
+let isRandom = false
 let updateTimer;
 
 const music_list = [
@@ -64,12 +66,12 @@ loadTrack(track_index);
 
 function loadTrack(track_index) {
     clearInterval(updateTimer);
-    resizeTo();
+    resize();
 
-    curr_time src = music_list [track_index].music;
+    curr_track.src = music_list[track_index].music;
     curr_track.load();
 
-    track_art.computedStyleMap.backgroundImage = "url(" + music_list[track_index].img + ")";
+    track_art.backgroundImage = "url(" + music_list[track_index].img + ")";
     track_name.textContent = music_list[track_index].name;
     now_playing.textConent = "Playing music " + (track_index + 1) + " of " + music_list.length;
 
@@ -78,14 +80,40 @@ function loadTrack(track_index) {
     curr_track.addEventListener('ended', nextTrack);
 }
 
+function reset() {
+    curr_time.textContent = "00:00";
+    total_duration.textContent = "00:00";
+    seek_slider.value = 0;
+}
+
+function randomTrack(){
+    isRandom ? pauseRandom() : playRandom();
+}
+
+function playRandom() {
+    isRandom = true;
+    randomIcon.classList.add('randomActive');
+}
+
+function pauseRandom() {
+    isRandom = false;
+    randomIcon.classList.remove('randomActive');
+}
+
+function repeatTrack() {
+    let current_index = track_index;
+    loadTrack(current_index);
+    playTrack();
+}
+
 function playpauseTrack() {
-    isplaying ? pauseTrack() : playTrack();
+    isPlaying ? pauseTrack() : playTrack();
 }
 
 function playTrack() {
     curr_track.play();
-    isplaying = true;
+    isPlaying = true;
     track_art.classList.add('rotate');
     wave.classList.add('loader');
-    playpause_btn.innerHTML = '<i class="Image/PauseButton';
+    playpause_btn.innerHTML = '<i class="Image/PauseButton.png';
 }

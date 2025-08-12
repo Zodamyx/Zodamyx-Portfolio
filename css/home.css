@@ -68,10 +68,10 @@ div p {
     border: 2px solid white;
     background-size: cover;
     background-position: center;
-    border-radius: 0px 6px 5px rgba(124, 53, 116, 0.808);
-    -moz-box-shadow: 0px 6px 5px rgba(124, 53, 116, 0.808);
-    -webkit-box-shadow: 0px 6px 5px rgba(124, 53, 116, 0.808);
-    box-shadow: 0px 6px 5px rgba(124, 53, 116, 0.808);
+    border-radius: 0px 3px 2px rgba(124, 53, 116, 0.618);
+    -moz-box-shadow: 0px 3px 2px rgba(124, 53, 116, 0.618);
+    -webkit-box-shadow: 0px 2px 3px rgba(124, 53, 116, 0.618);
+    box-shadow: 0px 3px 2px rgba(124, 53, 116, 0.618);
     -moz-border-radius: 190px;
     -webkit-border-radius: 20px;
     border-radius: 20px;
@@ -96,19 +96,23 @@ div p {
     color: black;
 }
 
+.random-track,
 .playpause-track,
 .prev-track,
-.next-track {
+.next-track,
+.repeat-track {
+    padding-left: 18px;
+    padding-right: 18px;
     padding-top: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
     opacity: 0.8;
     transition: opacity .2s;
 }
 
+.random-track:hover,
 .playpause-track:hover,
 .prev-track:hover,
-.next-track:hover {
+.next-track:hover,
+.repeat-track:hover {
     opacity: 1.0;
 }
 
@@ -124,7 +128,7 @@ div p {
     -moz-appearance: none;
     appearance: none;
     height: 5px;
-    background: rgb(102, 62, 151);
+    background: rgb(153, 66, 156);
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
@@ -137,7 +141,7 @@ div p {
     width: 15px;
     height: 15px;
     background: white;
-    border: 3px solid rgb(71, 40, 109);
+    border: 3px solid rgb(123, 54, 124);
     cursor: pointer;
     border-radius: 100%;
 }
@@ -166,6 +170,8 @@ img.VolumeUpButton {
 }
 
 img,
+img.RepeatButton,
+img.RandomButton,
 img.PlayButton,
 img.PauseButton,
 img.ForwardButton,
@@ -175,19 +181,6 @@ img.BackwardButton {
 
 .randomActive {
     color: black;
-}
-
-.rotate {
-    animation: rotation 8s infinite linear;
-}
-
-@keyframes rotation {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(359deg);
-    }
 }
 
 .loader {

@@ -170,12 +170,12 @@ img.VolumeUpButton {
 }
 
 img,
-img.RepeatButton,
 img.RandomButton,
 img.PlayButton,
 img.PauseButton,
 img.ForwardButton,
-img.BackwardButton {
+img.BackwardButton,
+img.RepeatButton {
     cursor: pointer;
 }
 

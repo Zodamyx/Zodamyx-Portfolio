@@ -1,17 +1,17 @@
 let now_playing = document.querySelector('.now-playing');
 let track_art = document.querySelector('.track-art');
-let track_name = document.quarySelector('.track_name');
+let track_name = document.querySelector('.track-name');
 
 let playpause_btn = document.querySelector('.playpause-track');
 let next_btn = document.querySelector('.next-track');
-let prev_btn = document.querySelector('.prev_track');
+let prev_btn = document.querySelector('.prev-track');
 
 let seek_slider = document.querySelector('.seek_slider');
 let volume_slider = document.querySelector('.volume_slider');
 let curr_time = document.querySelector('.current-time');
 let total_duration = document.querySelector('.total-duration');
 let wave = document.getElementById('wave');
-let randomIcon = document.querySelector('.RandomButton.png');
+let randomIcon = document.querySelector('.random-track');
 let curr_track = document.createElement('audio');
 
 let track_index = 0;
@@ -58,7 +58,7 @@ const music_list = [
     {
         img : 'Images/MeiKai_R0cky_Drink.jpg',
         name : 'R0cky_Drink3r.wav',
-        music : 'Audio/R0cky_Drink3r.mp3',
+        music : 'Audio/R0cky_Dr1nk3r.mp3',
     },
 ];
 
@@ -73,7 +73,7 @@ function loadTrack(track_index){
 
     track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
     track_name.textContent = music_list[track_index].name;
-    now_playing.textConent = "Playing music " + (track_index + 1) + " of " + music_list.length;
+    now_playing.textConent = "Playing music" + (track_index + 1) + " of " + music_list.length;
 
     updateTimer = setInterval(setUpdate, 1000)
 
@@ -117,22 +117,29 @@ function pauseTrack(){
     playpause_btn.innerIMG = '<img src="./Icons/PlayButton.png">';
 }
 function nextTrack(){
-    if(track_index < music_list.length - 1 && isRandom === false)[
+    if(track_index < music_list.length - 1 && isRandom === false){
+        track_index += 1;
+    }else if(track_index < music_list.length - 1 && isRandom === true){
+        let random_index = Number.parseInt(Math.random() * music_list.length);
+        track_index = random_index;
+    }else{
         track_index = 0;
-    ]
+    }
     loadTrack(track_index);
     playTrack();
 }
 function prevTrack(){
     if(track_index > 0){
+        track_index -= 1;
+    }else{
         track_index = music_list.length -1;
     }
     loadTrack(track_index);
     playTrack();
 }
 function seekTo(){
-    let seekTo = curr_track.duration * (seek_slider.value / 100);
-    curr_track.currentTime = seekTo;
+    let seekto = curr_track.duration * (seek_slider.value / 100);
+    curr_track.currentTime = seekto;
 }
 function setVolume(){
     curr_track.volume = volume_slider.value / 100;
@@ -148,12 +155,12 @@ function setUpdate(){
         let durationMinutes = Math.floor(curr_track.duration / 60);
         let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
 
-        if(currentSeconds < 10) {currentSeconds = "0" + currentSeconds;}
-        if(durationSeconds < 10) {durationSeconds = "0" + durationSeconds;}
-        if(currentMinutes < 10) {currentMinutes = "0" + currentMinutes;}
-        if(durationMinutes < 10) {durationMinutes = "0" + durationMinutes;}
+        if(currentSeconds < 10) {currentSeconds = "0" + currentSeconds; }
+        if(durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+        if(currentMinutes < 10) {currentMinutes = "0" + currentMinutes; }
+        if(durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
 
-        curr_time.textContent + currentMinutes + ":" + currentSeconds;
+        curr_time.textContent = currentMinutes + ":" + currentSeconds;
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
     }
 }

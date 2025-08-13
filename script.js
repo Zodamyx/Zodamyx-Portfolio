@@ -11,7 +11,7 @@ let volume_slider = document.querySelector('.volume_slider');
 let curr_time = document.querySelector('.current-time');
 let total_duration = document.querySelector('.total-duration');
 let wave = document.getElementById('wave');
-let randomIcon = document.querySelector('.random-track');
+let randomIcon = document.querySelector('.RandomButton');
 let curr_track = document.createElement('audio');
 
 let track_index = 0;
@@ -108,13 +108,13 @@ function playTrack(){
     isPlaying = true;
     track_art.classList.add('rotate');
     wave.classList.add('loader');
-    playpause_btn.innerIMG = '<img src="./Icons/PauseButton.png">';
+    playpause_btn.innerHTML = '<img src="./Icons/PauseButton.png">';
 }
 function pauseTrack(){
     curr_track.pause();
     isPlaying = false;
     wave.classList.remove('loader');
-    playpause_btn.innerIMG = '<img src="./Icons/PlayButton.png">';
+    playpause_btn.innerHTML = '<img src="./Icons/PlayButton.png">';
 }
 function nextTrack(){
     if(track_index < music_list.length - 1 && isRandom === false){

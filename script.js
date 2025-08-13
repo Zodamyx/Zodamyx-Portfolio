@@ -11,7 +11,7 @@ let volume_slider = document.querySelector('.volume_slider');
 let curr_time = document.querySelector('.current-time');
 let total_duration = document.querySelector('.total-duration');
 let wave = document.getElementById('wave');
-let randomIcon = document.querySelector('.RandomButton');
+let randomImages = document.querySelector('.RandomButton.png');
 let curr_track = document.createElement('audio');
 
 let track_index = 0;
@@ -26,17 +26,17 @@ const music_list = [
         music : 'Audio/Chi11_R4iny_D4y.mp3',
     },
     {
-        img : 'Images/Living District.jpg',
+        img : 'Images/LivingDistrict.jpg',
         name : 'Eerie, Empty Home with Eyes',
         music : 'Audio/Eerie, Empty Home with Eyes.mp3',
     },
     {
-        img : 'Images/Living District.jpg',
+        img : 'Images/LivingDistrict.jpg',
         name : 'Living District',
         music : 'Audio/Living District.mp3',
     },
     {
-        img : 'Images/Living District.jpg',
+        img : 'Images/LivingDistrict.jpg',
         name : 'Wait and Chill Zone',
         music : 'Audio/Wait and Chill Zone.mp3',
     },

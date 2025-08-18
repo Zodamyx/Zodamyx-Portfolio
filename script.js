@@ -26,6 +26,11 @@ const music_list = [
         music : 'Audio/Chi11_R4iny_D4y.mp3',
     },
     {
+        img : 'Images/R4iny.jpg',
+        name : 'Crush3d_to_8its.wav',
+        music : 'Crush3d_to_8its.mp3',
+    },
+    {
         img : 'Images/LivingDistrict.jpg',
         name : 'Eerie, Empty Home with Eyes',
         music : 'Audio/Eerie, Empty Home with Eyes.mp3',

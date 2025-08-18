@@ -28,7 +28,7 @@ const music_list = [
     {
         img : 'Images/R4iny.jpg',
         name : 'Crush3d_to_8its.wav',
-        music : 'Crush3d_to_8its.mp3',
+        music : 'Audio/Crush3d_to_8its.mp3',
     },
     {
         img : 'Images/LivingDistrict.jpg',

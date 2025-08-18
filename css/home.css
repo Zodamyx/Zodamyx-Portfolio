@@ -17,11 +17,13 @@ div h1 {
 }
 
 div p {
+    line-height: 20px;
     width: 300px;
     padding-left: 50px;
     float: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: small;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 

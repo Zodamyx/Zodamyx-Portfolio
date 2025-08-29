@@ -1,20 +1,27 @@
 
 main {
     background-color: rgba(255, 255, 255, 0.92);
-    height: 500px;
+    height: flex;
     margin-top: 50px;
     margin-bottom: 100px;
     margin-left: 300px;
     margin-right: 300px;
     border-radius: 20px;
+    padding-bottom: 30px;
+    padding-top: 15px;
     box-shadow: -8px -8px rgb(255, 255, 255), 8px 8px rgb(255, 255, 255), -8px 8px rgb(255, 255, 255), 8px -8px rgb(255, 255, 255);
 }
 div h1 {
-    padding-top: 20px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
 }
+
+div h2 {
+    line-height: 0%;
+    padding-top: 15px;
+}
+
 div section{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;

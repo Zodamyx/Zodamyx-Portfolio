@@ -6,14 +6,14 @@
 
 /* create four equal columns that sit next to each other */
 .column {
-    flex: 20%;
-    max-width: 20%;
+    flex: auto;
+    max-width: 64px;
     padding: 0 32px;
 }
 
 .column img {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     vertical-align: middle;
     width: 100%;
 }
@@ -44,6 +44,6 @@ main {
 }
 div img {
     background-color: rgb(45, 45, 45);
-    box-shadow: -8px -8px rgb(255, 255, 255), 8px 8px rgb(255, 255, 255), -8px 8px rgb(255, 255, 255), 8px -8px rgb(255, 255, 255);
+    box-shadow: -4px -4px rgb(255, 255, 255), 4px 4px rgb(255, 255, 255), -4px 4px rgb(255, 255, 255), 4px -4px rgb(255, 255, 255);
     border-radius: 20px;
 }
